@@ -1,4 +1,181 @@
-/* 1. 合并选择器 */
+/* 重置与基础样式 */
+html {
+  background-color: #fff;
+  font: normal 112.5%/1.65 serif;
+}
+
+body {
+  margin: 0;
+  color: #333332;
+  word-wrap: normal;
+  font-family: 'PT Serif', serif;
+}
+
+/* 布局容器 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 顶部导航栏样式 - 根据第一张图片 */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #343434;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #1a1a1a;
+}
+
+/* 主要内容区域布局 - 根据第一张图片 */
+.main-content {
+  display: flex;
+  margin-top: 2rem;
+  gap: 3rem;
+}
+
+/* 左侧边栏样式 - 根据两张图片的共同特点 */
+.sidebar {
+  width: 25%;
+  min-width: 250px;
+}
+
+.profile-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.contact-links li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #343434;
+}
+
+.contact-links a:hover {
+  color: #1a1a1a;
+}
+
+/* 右侧内容区域样式 */
+.content-area {
+  width: 75%;
+  flex-grow: 1;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* 研究兴趣部分样式 - 根据第一张图片 */
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.research-item {
+  background: #f7f7f7;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* 社交媒体图标样式 - 根据第二张图片 */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  color: #343434;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  background: #e0e0e0;
+}
+
+/* 响应式设计 */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .content-area {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .research-interests {
+    flex-direction: column;
+  }
+}
+
+/* 保留原有的优化样式，但确保不影响布局 */
 article,
 aside,
 details,
@@ -20,7 +197,6 @@ video {
   display: inline-block;
 }
 
-/* 修复：添加原始代码中遗漏的规则 */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -30,7 +206,20 @@ audio:not([controls]) {
   display: none;
 }
 
-/* 2. 简化选择器组 */
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
 abbr[title],
 blockquote,
 code,
@@ -50,59 +239,6 @@ xmp {
   hyphens: none;
 }
 
-/* 3. 合并重复属性 */
-.clearfix {
-  *zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after {
-  display: table;
-  content: "";
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-/* 4. 修复媒体查询语法 */
-@media (max-width: 1100px) {
-  .visible-phone {
-    display: inherit !important;
-  }
-
-  .hidden-phone {
-    display: none !important;
-  }
-
-  .hidden-desktop {
-    display: inherit !important;
-  }
-
-  .visible-desktop {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1100px) and (max-width: 1300px) {
-  .visible-tablet {
-    display: inherit !important;
-  }
-
-  .hidden-tablet {
-    display: none !important;
-  }
-
-  .hidden-desktop {
-    display: inherit !important;
-  }
-
-  .visible-desktop {
-    display: none !important;
-  }
-}
-
-/* 5. 简化文本修饰 */
 a,
 a:visited,
 a:active,
@@ -117,46 +253,6 @@ a:hover {
   color: #1a1a1a;
 }
 
-/* 6. 修复.btn选择器块 */
-.btn {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  padding: 12px 24px;
-  margin-bottom: 2em;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  vertical-align: middle;
-  border: 4px double #333332;
-  border-radius: 50px;
-  cursor: pointer;
-  *margin-left: .3em;
-  transition: 0.4s linear;
-}
-
-/* 7. 修复伪元素语法 */
-.pull-quote:before {
-  content: '""';
-  top: 0;
-  left: 0;
-}
-
-.pull-quote:after {
-  content: '""';
-  bottom: 0;
-  right: 0;
-}
-
-.pull-quote:before,
-.pull-quote:after {
-  height: 1em;
-  opacity: 0.15;
-  position: absolute;
-  font-size: 4em;
-}
-
-/* 8. 优化图片处理 */
 article img {
   max-width: 100%;
   height: auto;
@@ -165,7 +261,6 @@ article img {
   -ms-interpolation-mode: bicubic;
 }
 
-/* 9. 优化表单元素 */
 input,
 button,
 select,
@@ -176,7 +271,6 @@ textarea {
   box-sizing: border-box;
 }
 
-/* 10. 简化排版 */
 h1,
 h2,
 h3,
@@ -196,25 +290,6 @@ h1 {
   margin-bottom: 0.495rem;
 }
 
-/* 11. 优化响应式处理 */
-@media only screen and (min-width: 30em) {
-  .image-grid li {
-    width: 33.333333%;
-  }
-}
-
-@media only screen and (min-width: 37.5em) {
-  html {
-    font-size: 95%;
-  }
-
-  .site-name {
-    width: 16.666666666666668%;
-    margin: 0 4.166666666666667%;
-  }
-}
-
-/* 12. 合并字体声明 */
 @font-face {
   font-family: 'icomoon';
   src: url('../fonts/icomoon.eot');
@@ -226,28 +301,6 @@ h1 {
   font-style: normal;
 }
 
-/* 13. 优化列表样式 */
-.stats-tabs li {
-  display: inline-block;
-  margin: 0 0.625rem 0 0;
-  padding: 0 0.625rem 0 0;
-  border-right: 0.125rem solid #ccc;
-}
-
-/* 14. 简化定位 */
-.toc {
-  position: fixed;
-  top: 120px;
-  right: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
-
-/* 15. 优化过渡效果 */
-.mfp-arrow {
-  transition: opacity 0.2s ease-in-out;
-}
-
-/* 16. 优化打印样式 */
 @media print {
   * {
     background: transparent !important;
@@ -269,42 +322,4 @@ h1 {
     widows: 3;
     page-break-after: avoid;
   }
-}
-
-/* 17. 简化按钮状态 */
-.btn-inverse {
-  border: 4px double #fff;
-  color: #fff;
-  background-color: #000;
-}
-
-.btn-inverse:hover {
-  color: #fff;
-  border-color: #fff;
-}
-
-/* 18. 优化表单布局 */
-.form-inline input,
-.form-inline textarea,
-.form-inline select {
-  display: inline-block;
-  margin-bottom: 0;
-}
-
-/* 19. 优化动画效果 */
-.mfp-fade .zoom-anim-dialog {
-  transition: all 0.2s ease-in-out;
-}
-
-/* 20. 简化通用样式 */
-body {
-  margin: 0;
-  color: #333332;
-  word-wrap: normal;
-  font-family: 'PT Serif', serif;
-}
-
-html {
-  background-color: #fff;
-  font: normal 112.5%/1.65 serif;
 }
