@@ -223,7 +223,7 @@ img.floatpic {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  border: 4px double #333;
+  border: 4px double #000820;
   border-radius: 50px;
 }
 
@@ -265,12 +265,12 @@ img.floatpic {
 
 /* =============== 精简后的主题样式 =============== */
 a {
-  color: #343434;
+  color: #d5d5d5;
   text-decoration: none;
 }
 
 a:hover {
-  color: #1a1a1a;
+  color: #c0c0c0;
 }
 
 h1,
@@ -281,7 +281,7 @@ h5,
 h6 {
   font-family: 'PT Sans Narrow', sans-serif;
   font-weight: 700;
-  color: #333;
+  color: #dddddd;
 }
 
 /* 列表样式 */
@@ -301,11 +301,9 @@ pre {
 code {
   font-family: monospace;
   padding: 0 5px;
-  background: #f2f2f2;
+  background: #ffffff;
   border-radius: 3px;
 }
-
-/**/
 
 /* 侧边栏布局优化 */
 .sidebar {
@@ -317,7 +315,7 @@ code {
   max-height: calc(100vh - 140px);
   overflow-y: auto;
   padding: 20px;
-  background: white;
+  /* background: white; */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 100;
@@ -369,7 +367,7 @@ code {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #4CAF50;
+  border: 3px solid #000000;
 }
 
 .contact-links {
@@ -392,12 +390,12 @@ code {
 }
 
 .contact-links a:hover {
-  color: #4CAF50;
+  color: #dddddd;
 }
 
 .contact-links i {
   margin-right: 10px;
   width: 20px;
   text-align: center;
-  color: #4CAF50;
+  color: #dddddd;
 }
