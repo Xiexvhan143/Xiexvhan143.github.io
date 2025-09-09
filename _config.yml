@@ -1,123 +1,52 @@
-# --------------------------------------------------
-#  BASIC SITE INFO
-# --------------------------------------------------
-title: 谢栩瀚   # Main site title (appears in browser tab & RSS)
-tagline: 这是我的个人网站，用于放置我的简历与作品集 # Optional short tagline, used by some layouts
-description: 一个Blender 3D场景设计师。 # Strongly recommended for SEO & social cards
-
-# TIP ── For local development you can comment out `url`
-# and build with relative paths. In production you want this set.
+# 基本站点信息
+title: 谢栩瀚
+tagline: 这是我的个人网站，用于放置我的简历与作品集
+description: 一个Blender 3D场景设计师。
 url: https://xiexvhan143.github.io/
 
-# --------------------------------------------------
-#  AUTHOR / PROFILE DATA
-# --------------------------------------------------
+# 作者信息
 owner:
   name: 谢栩瀚
   avatar: hanlin.jpg
-  # bio: Dream big, stay positive, work hard, and enjoy the journey.
   email: 3244252455@qq.com
   cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
+  social:
+    twitter: lancecai2002
+    github: Xiexvhan143
+    linkedin: 谢栩瀚
+    zhihu: https://www.zhihu.com/people/chlire
+    bilibili: 594030035
 
-
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: lancecai2002
-  github: Xiexvhan143
-  linkedin: 谢栩瀚
-  scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  researchgate: https://www.researchgate.net/profile/Hanlin-Cai
-  zhihu: https://www.zhihu.com/people/chlire
-  xiaohongshu: 5c27848f0000000005030c6f
-  bilibili: 594030035
-
-
-# --------------------------------------------------
-#  TOP NAVIGATION BAR
-external: true` opens the link in a new tab.
-# --------------------------------------------------
+# 导航菜单
 links:
-  - title:  关于
+  - title: 关于
     url: /
   - title: 作品集
     url: /publications/
-  # - title: Awards
-  #   url: /awards/
-  # - title: Hobbies
-  #   url: /hobbies/
   - title: Blogs
     url: /blogs/
-  # - title: 中文
-  #   url: /cn/
 
+# 构建配置
+timezone: Asia/Shanghai
+future: true
+highlighter: rouge
+permalink: /:categories/:title
 
-# --------------------------------------------------
-#  BUILD & RENDERING OPTIONS
-# --------------------------------------------------
-timezone: Asia/Shanghai          # IANA time-zone ID (China/Beijing is invalid)
-future: true                     # Render posts dated in the future
-highlighter: rouge               # Code highlighter; Rouge is default in MM
-# markdown: kramdown             # Jekyll default; uncomment to force
-# pygments: true                 # Legacy option (Rouge supersedes this)
-
-
-# --------------------------------------------------
-#  PERMALINK STRUCTURE
-# --------------------------------------------------
-permalink: /:categories/:title    # e.g. /tech/my-post/
-
-
-# --------------------------------------------------
-#  KRAMDOWN (Markdown engine) SETTINGS
-# --------------------------------------------------
+# Markdown引擎设置
 kramdown:
   auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
   toc_levels: 1..6
-  enable_coderay: false
 
-  # coderay:
-  #   coderay_line_numbers:
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
-
-# --------------------------------------------------
-#  DISQUS COMMENT SYSTEM
-# --------------------------------------------------
-disqus:
-  shortname: lancecai
-
-
-# include: [".htaccess"]
-# exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
-
-# --------------------------------------------------
-#  INCLUDE / EXCLUDE Lists
-# --------------------------------------------------
-include: [".htaccess"]           # Files to force-include in the build
-exclude:                         # Folders/files ignored during build
+# 文件包含/排除规则
+include: [".htaccess"]
+exclude:
   - "lib"
-  - "config.rb"
-  - "Capfile"
   - "config"
   - "log"
-  - "Rakefile"
-  - "Rakefile.rb"
   - "tmp"
-  - "less"
-  - "minimal-mistakes.sublime-project"
-  - "minimal-mistakes.sublime-workspace"
-
-
-# --------------------------------------------------
-#  OPTIONAL PLUG-INS (uncomment once gems are added)
-# --------------------------------------------------
-plugins:
-  - jekyll-feed          # Auto-generate RSS feed
-  - jekyll-sitemap       # Auto-generate sitemap.xml
-  - jekyll-seo-tag       # Adds SEO meta tags & JSON-LD
-#   - jekyll-picture-tag   # Responsive images & WebP/AVIF
-  # - jekyll-archives      # Year/month archive pages
