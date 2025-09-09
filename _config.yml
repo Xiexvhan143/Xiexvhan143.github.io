@@ -35,19 +35,16 @@ owner:
 external: true` opens the link in a new tab.
 # --------------------------------------------------
 links:
-  - title:  关于
+  title:  关于
     url: /
-  - title: 作品集
+   title: 作品集
     url: /publications/
   # - title: Awards
   #   url: /awards/
   # - title: Hobbies
   #   url: /hobbies/
-  - title: Blogs
+   title: 博客
     url: /blogs/
-  # - title: 中文
-  #   url: /cn/
-
 
 # --------------------------------------------------
 #  BUILD & RENDERING OPTIONS
