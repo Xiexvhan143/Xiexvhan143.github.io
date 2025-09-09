@@ -20,15 +20,15 @@ width="100" height="100"></a>
     {% endif %}
 
     <!-- 主要社交媒体链接 -->
-    {% if site.owner.github %}
+    {% if site.owner.social.github %}
     <p><a href="https://github.com/{{ site.owner.github }}"><i class="icon-github"></i> GitHub</a></p>
     {% endif %}
 
-    {% if site.owner.bilibili %}
+    {% if site.owner.social.bilibili %}
     <p><a href="https://space.bilibili.com/{{ site.owner.bilibili }}"><i class="icon-bilibili"></i> Bilibili</a></p>
     {% endif %}
 
-    {% if site.owner.zhihu %}
+    {% if site.owner.social.zhihu %}
     <p><a href="{{ site.owner.zhihu }}"><i class="icon-zhihu"></i> 知乎</a></p>
     {% endif %}
 </div>
