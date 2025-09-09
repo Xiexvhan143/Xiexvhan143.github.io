@@ -19,20 +19,14 @@ audio:not([controls]) {
 html {
   font-family: sans-serif;
   text-size-adjust: 100%;
+  font: normal 115%/1.5 serif;
 }
 
 body {
   margin: 0;
   padding: 20px 30px;
-}
-
-/* =============== 排版系统 =============== */
-html {
-  font: normal 115%/1.5 serif;
-}
-
-body {
   color: #080029;
+  background-color: #040010;
 }
 
 /* 标题层级 */
