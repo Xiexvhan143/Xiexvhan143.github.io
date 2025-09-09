@@ -144,19 +144,19 @@ p+p {
   border-radius: 6px;
   transition: all 0.2s ease;
   text-decoration: none;
-  color: #ff6f6f;
+  color: #ff8080;
 }
 
 .article-author-top p a:hover {
   background-color: #f0f8f0;
-  color: #ad2c2c;
+  color: #aa2c2c;
 }
 
 .article-author-top p a i {
   margin-right: 10px;
   width: 20px;
   text-align: center;
-  color: #ff6a6a;
+  color: #ff8080;
 }
 
 /* =============== 导航区域 =============== */
@@ -259,12 +259,13 @@ img.floatpic {
 
 /* =============== 精简后的主题样式 =============== */
 a {
-  color: #d5d5d5;
+  color: #ff8080;
   text-decoration: none;
 }
 
 a:hover {
-  color: #c0c0c0;
+  background-color: #f0f8f0;
+  color: #aa2c2c;
 }
 
 h1,
