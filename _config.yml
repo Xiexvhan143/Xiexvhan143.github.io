@@ -30,21 +30,25 @@ owner:
   xiaohongshu: 5c27848f0000000005030c6f
   bilibili: 594030035
 
+
 # --------------------------------------------------
 #  TOP NAVIGATION BAR
 external: true` opens the link in a new tab.
 # --------------------------------------------------
 links:
-  title:  关于
+  - title:  关于
     url: /
-   title: 作品集
+  - title: 作品集
     url: /publications/
   # - title: Awards
   #   url: /awards/
   # - title: Hobbies
   #   url: /hobbies/
-   title: 博客
+  - title: Blogs
     url: /blogs/
+  # - title: 中文
+  #   url: /cn/
+
 
 # --------------------------------------------------
 #  BUILD & RENDERING OPTIONS
