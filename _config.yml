@@ -22,8 +22,8 @@ links:
   - title: 关于
     url: /
   - title: 作品集
-    url: /publications/
-  - title: Blogs
+    url: /portfolio/
+  - title: 博客
     url: /blogs/
 
 # 构建配置
