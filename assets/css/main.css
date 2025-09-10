@@ -221,6 +221,10 @@ body {
   color: var(--accent-color);
 }
 
+.top-navigation li a::before {
+  display: none !important;
+}
+
 .top-navigation li a::after {
   content: '';
   position: absolute;
