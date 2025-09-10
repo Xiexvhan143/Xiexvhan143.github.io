@@ -173,11 +173,21 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.site-name {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .top-navigation {
   flex: 1;
-  margin-left: 2em;
   margin-bottom: 0;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .top-navigation ul {
@@ -186,25 +196,33 @@ body {
   padding-left: 0;
   margin: 0;
   padding: 0;
-  justify-content: center;
-  gap: 1.8rem;
-  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  /* 移除间隙，让项目顶满 */
+  width: 100%;
+  /* 确保ul占据全部宽度 */
 }
 
 .top-navigation li {
   list-style: none;
+  flex: 1;
+  /* 让每个li平均分配可用空间 */
+  text-align: center;
+  /* 文本居中 */
 }
 
 .top-navigation li a {
+  display: block;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 0.5rem;
   border-radius: 10px;
   transition: all var(--transition-speed);
   position: relative;
   color: var(--text-primary);
   text-decoration: none;
-  align-items: center;
+  width: 100%;
+  /* 链接占据全部可用宽度 */
 }
 
 .top-navigation li a:hover {
