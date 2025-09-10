@@ -200,7 +200,7 @@ body {
   font-size: 1.8rem;
   font-weight: 600;
   padding: 0.8rem 1.5rem;
-  border-radius: 10px;
+  border-radius: 5px;
   transition: all var(--transition-speed);
   position: relative;
   color: var(--text-primary);
@@ -209,7 +209,6 @@ body {
 }
 
 .top-navigation li a:hover {
-  background-color: rgba(255, 107, 157, 0.15);
   color: var(--accent-color);
 }
 
@@ -299,6 +298,37 @@ p {
   color: var(--text-secondary);
 }
 
+/* 文章内容链接样式 */
+article a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all var(--transition-speed);
+  position: relative;
+}
+
+article a:hover {
+  color: #ff8db1;
+  /* 稍亮的粉色 */
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 107, 157, 0.5);
+  text-underline-offset: 3px;
+}
+
+article a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width var(--transition-speed);
+}
+
+article a:hover::after {
+  width: 100%;
+}
+
 /* 列表样式优化 */
 ul {
   padding-left: 1.5rem;
@@ -346,14 +376,34 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* 页脚链接样式 */
 footer a {
   color: var(--accent-color);
   text-decoration: none;
   transition: all var(--transition-speed);
+  position: relative;
 }
 
 footer a:hover {
+  color: #ff8db1;
   text-decoration: underline;
+  text-decoration-color: rgba(255, 107, 157, 0.5);
+  text-underline-offset: 3px;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-color);
+  transition: width var(--transition-speed);
+}
+
+footer a:hover::after {
+  width: 100%;
 }
 
 /* =============== 响应式设计优化 =============== */
@@ -379,8 +429,8 @@ footer a:hover {
   }
 
   .navigation-wrapper {
-      margin-bottom: 0;
-        align-self: flex-start;
+    margin-bottom: 0;
+    align-self: flex-start;
     flex-direction: column;
     text-align: center;
     padding: 1.5rem;
