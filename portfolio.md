@@ -13,6 +13,8 @@ title: 作品集
 ![自然景观场景](images/sources/自然.png)
 <img src="images/sources/自然.png" alt="自然景观场景" style="width:100%; height:auto;">
 
+![描述文字](images/sources/自然2.png){:.responsive}
+
 进一步细化
 
 ![添加石头](images/sources/自然2.png)

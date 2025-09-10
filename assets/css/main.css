@@ -35,6 +35,11 @@ body {
   align-items: flex-start;
 }
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
 /* 侧边栏样式优化 */
 .article-author-top {
   width: 250px;
