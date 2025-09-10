@@ -10,7 +10,7 @@ title: 作品集
 
 这是一个山地场景，废弃的物品和房子让这座山看似人迹罕至，与自然景观形成对比
 
-<img src="assets/04343e0aa14152fc4c5c903e0a22d96ac6e9a33f.png" title="" alt="自然场景主视图" data-align="inline">
+<img src="images/sources/自然.png" title="" alt="自然场景主视图" data-align="inline">
 
 ---
 
