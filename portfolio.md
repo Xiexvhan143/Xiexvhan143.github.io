@@ -12,7 +12,7 @@ title: 作品集
 
 ![描述文字](images/sources/自然2.png){:.responsive}
 
-进一步细化
+进一步细化，添加石头和体积雾，让场景更加真实
 
 ![添加石头](images/sources/自然2.png){:.responsive}
 
