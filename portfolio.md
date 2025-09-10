@@ -14,7 +14,7 @@ title: 作品集
 
 进一步细化
 
-![添加石头](images/sources/自然2.png)
+![添加石头](images/sources/自然2.png){:.responsive}
 
 ---
 
