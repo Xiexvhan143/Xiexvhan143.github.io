@@ -91,19 +91,19 @@ body {
   line-height: 1.5;
 }
 
-/* 联系链接样式优化 */
+/* 联系链接样式 */
 .contact-links {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 12px;
 }
 
 .contact-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 20px;
+  padding: 12px;
   border-radius: 10px;
   transition: all var(--transition-speed);
   text-decoration: none;
