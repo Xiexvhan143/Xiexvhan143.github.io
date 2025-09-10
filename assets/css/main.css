@@ -36,8 +36,8 @@ body {
 
 /* 侧边栏样式优化 */
 .article-author-top {
-  width: 300px;
-  padding: 30px 20px;
+  width: 250px;
+  padding: 25px;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
