@@ -1,5 +1,7 @@
 ---
 layout: page
+permalink: /portfolio/index.html
+title: 作品集
 ---
 
 # 作品集
