@@ -242,7 +242,6 @@ body {
 }
 
 /* =============== 内容区域样式优化 =============== */
-/* 标题层级优化 */
 h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -324,7 +323,6 @@ ul li {
 }
 
 ul li::before {
-  content: "•";
   color: var(--accent-color);
   font-size: 1.5rem;
   position: absolute;
@@ -334,9 +332,10 @@ ul li::before {
 
 /* 近期学习和作品列表 */
 ul li {
-  padding: 12px 0;
+  padding: 12px 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all var(--transition-speed);
+  content: none;
 }
 
 ul li:hover {
