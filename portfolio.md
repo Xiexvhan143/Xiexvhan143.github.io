@@ -16,10 +16,7 @@ permalink: /portfolio/index.html
 
 ![添加石头](images/sources/自然2.png){:.responsive}
 
----
+换个视角看看
 
-## 建筑
-
-参考了马德里皇宫的样式进行建模，
-
+![添加石头](images/sources/自然3.png){:.responsive}
 ---
