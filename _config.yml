@@ -12,12 +12,10 @@ owner:
   cv: /resume
   # https://caihanlin.com/file/CV-HanlinCAI.pdf
   social:
-    twitter: lancecai2002
     github: Xiexvhan143
     linkedin: 谢栩瀚
-    zhihu: https://www.zhihu.com/people/chlire
     bilibili: 1558822157
-    
+
 # 导航菜单
 links:
   - title: 关于
