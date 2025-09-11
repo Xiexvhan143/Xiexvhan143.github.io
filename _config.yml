@@ -9,7 +9,8 @@ owner:
   name: 谢栩瀚
   avatar: 谢栩瀚.png
   email: 3244252455@qq.com
-  cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
+  简历: /resume.md
+  # https://caihanlin.com/file/CV-HanlinCAI.pdf
   social:
     twitter: lancecai2002
     github: Xiexvhan143
