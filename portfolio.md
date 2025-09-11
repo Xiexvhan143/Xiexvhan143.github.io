@@ -10,7 +10,7 @@ permalink: /portfolio/index.html
 
 这是一个山地场景，废弃的物品和房子让这座山看似人迹罕至，与自然景观形成对比
 
-![描述文字](images/sources/自然.png){:.responsive}
+![山地场景](images/sources/自然.png){:.responsive}
 
 进一步细化，添加石头和体积雾，让场景更加真实
 
@@ -18,5 +18,6 @@ permalink: /portfolio/index.html
 
 换个视角看看
 
-![添加石头](images/sources/自然3.png){:.responsive}
+![换个视角](images/sources/自然3.png){:.responsive}
+
 ---
