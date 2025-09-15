@@ -16,3 +16,17 @@ layout: page
 - **2025  7月底**：学习了 [**Blender 4.5LTS**](https://www.blender.org/download/) 更新的功能，包括新节点、UV工具等；尝试了切换到 Vulcan 带来的变化
 - **2025 7月**：熟悉了 Blender 的雕刻和贴图烘焙系统，深入了解修改器和节点组对烘焙的影响
 - **2025 6月底**：学习了更多实例化的方法，并自制了基础的实例化节点，它支持对实例物体的镜像
+
+---
+
+<!-- 添加技能图标展示区域 -->
+
+## 专业技能展示
+
+<div class="skills-container" id="skillsContainer"> 
+ <div class="skill-item" draggable="true"></div>
+ <div class="skill-item" draggable="true"></div>
+ <div class="skill-item" draggable="true"></div>
+ <div class="skill-item" draggable="true"></div>
+ <div class="skill-item" draggable="true"></div>
+</div>
