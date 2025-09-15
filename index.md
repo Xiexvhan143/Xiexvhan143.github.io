@@ -23,10 +23,10 @@ layout: page
 
 ## 专业技能展示
 
-<div class="skills-container" id="skillsContainer"> 
- <div class="skill-item" draggable="true"></div>
- <div class="skill-item" draggable="true"></div>
- <div class="skill-item" draggable="true"></div>
- <div class="skill-item" draggable="true"></div>
- <div class="skill-item" draggable="true"></div>
+<div class="skills-container" id="skillsContainer">
+  <div class="skill-item" draggable="true"><span>Blender</span></div>
+  <div class="skill-item" draggable="true"><span>Substance Painter</span> </div>
+  <div class="skill-item" draggable="true"><span>ZBrush</span></div>
+  <div class="skill-item" draggable="true"><span>Photoshop</span></div>
+  <div class="skill-item" draggable="true"><span>Ai</span></div>
 </div>

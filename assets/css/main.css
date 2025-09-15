@@ -548,6 +548,7 @@ footer {
   width: 90px;
   height: 90px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
@@ -571,16 +572,29 @@ footer {
 }
 
 .skill-item img {
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
-  transition: transform var(--transition-speed);
+  width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .skill-item:hover img {
   transform: scale(1.15);
 }
 
+.skill-item span {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover span {
+  opacity: 1;
+  color: var(--accent-color);
+}
 /* 拖动效果 */
 .skill-item.dragging {
   opacity: 0.7;
