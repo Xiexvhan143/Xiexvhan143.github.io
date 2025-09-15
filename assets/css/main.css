@@ -303,35 +303,72 @@ p {
   color: var(--text-secondary);
 }
 
-/* 文章内容链接样式 */
+/* =============== 文章内容链接样式优化 =============== */
 article a {
+  color: var(--accent-color);
+  text-decoration: none;
+  /* 移除默认下划线 */
+  transition: all var(--transition-speed);
+  position: relative;
+}
+
+article a:hover {
+  color: var(--accent-color);
+  /* 保持颜色一致 */
+  text-decoration: none;
+  /* 确保悬停时无下划线 */
+}
+
+article a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  /* 调整位置到文字下方 */
+  left: 50%;
+  /* 从中间开始扩展 */
+  transform: translateX(-50%);
+  /* 居中定位 */
+  width: 0;
+  height: 3px;
+  /* 与导航栏一致的高度 */
+  background-color: var(--accent-color);
+  transition: width var(--transition-speed);
+  border-radius: 1.5px;
+  /* 添加轻微圆角 */
+}
+
+article a:hover::after {
+  width: 80%;
+  /* 扩展到80%宽度 */
+}
+
+/* =============== 页脚链接样式优化 =============== */
+footer a {
   color: var(--accent-color);
   text-decoration: none;
   transition: all var(--transition-speed);
   position: relative;
 }
 
-article a:hover {
-  color: #ff8db1;
-  /* 稍亮的粉色 */
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 107, 157, 0.5);
-  text-underline-offset: 3px;
+footer a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
-article a::after {
+footer a::after {
   content: '';
   position: absolute;
   bottom: -2px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 2px;
   background: var(--accent-color);
   transition: width var(--transition-speed);
 }
 
-article a:hover::after {
-  width: 100%;
+footer a:hover::after {
+  width: 80%;
 }
 
 /* 列表样式优化 */
@@ -379,36 +416,6 @@ footer {
   color: var(--text-secondary);
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* 页脚链接样式 */
-footer a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: all var(--transition-speed);
-  position: relative;
-}
-
-footer a:hover {
-  color: #ff8db1;
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 107, 157, 0.5);
-  text-underline-offset: 3px;
-}
-
-footer a::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent-color);
-  transition: width var(--transition-speed);
-}
-
-footer a:hover::after {
-  width: 100%;
 }
 
 /* =============== 响应式设计优化 =============== */
