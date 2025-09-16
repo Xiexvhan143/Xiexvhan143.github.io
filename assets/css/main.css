@@ -22,6 +22,8 @@ body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  cursor: url('{{ site.url }}/images/sources/Cursor.svg'),
+  auto;
 }
 
 /* =============== 布局系统优化 =============== */
