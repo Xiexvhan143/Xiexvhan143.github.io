@@ -12,6 +12,9 @@
 
 html {
   scroll-behavior: smooth;
+  cursor: url('//images/sources/Cursor.svg'), 5 5,
+    url('/images/sources/Cursor.png') 5 5,
+    pointer;
 }
 
 body {
@@ -22,9 +25,6 @@ body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: url('//images/sources/Cursor.svg'), 5 5,
-    url('/images/sources/Cursor.png') 5 5,
-    pointer;
 }
 
 /* =============== 布局系统优化 =============== */
