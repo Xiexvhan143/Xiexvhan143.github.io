@@ -531,19 +531,90 @@ footer {
   color: var(--text-primary);
 }
 
-/* ======== 技能图标展示区域 ======== */
-.skills-container {
+.gravity-control {
   display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 25px;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: var(--accent-color);
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+.gravity-label {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* 技能容器样式 */
+.skills-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   margin: 40px 0;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skills-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: rgba(255, 107, 107, 0.1);
+  z-index: 1;
 }
 
 .skill-item {
+  position: absolute;
   width: 90px;
   height: 90px;
   display: flex;
@@ -555,18 +626,20 @@ footer {
   cursor: grab;
   transition: all var(--transition-speed);
   overflow: hidden;
-  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .skill-item:active {
   cursor: grabbing;
+  z-index: 10;
 }
 
 .skill-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 107, 157, 0.3);
+  border: 1px solid rgba(255, 107, 157, 0.3);
 }
 
 .skill-item img {
@@ -596,49 +669,51 @@ footer {
 
 /* 拖动效果 */
 .skill-item.dragging {
-  opacity: 0.7;
+  opacity: 0.9;
   transform: scale(1.05);
   z-index: 10;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transition: none;
 }
 
-/* 移动端优化 */
+/* 技能标签 */
+.skill-label {
+  position: absolute;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-label {
+  bottom: 10px;
+  color: var(--accent-color);
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .skills-container {
-    gap: 15px;
-    padding: 15px;
-    justify-content: center;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none;
+  .container {
+    padding: 20px 15px;
   }
 
-  .skills-container::-webkit-scrollbar {
-    display: none;
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .skills-container {
+    height: 400px;
   }
 
   .skill-item {
     width: 75px;
     height: 75px;
-    flex-shrink: 0;
-  }
-}
-
-/* 拖动动画效果 */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 157, 0.6);
   }
 
-  70% {
-    box-shadow: 0 0 0 10px rgba(255, 107, 157, 0);
+  .skill-item img {
+    width: 40px;
+    height: 40px;
   }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 107, 157, 0);
-  }
-}
-
-.skill-item:active {
-  animation: pulse 1.5s infinite;
 }
