@@ -8,13 +8,11 @@
   --background-dark: #040010;
   --card-bg: rgba(255, 255, 255, 0.03);
   --transition-speed: 0.3s;
+  --cursor-default: url('/images/sources/Cursor.svg') 5 5, auto;
 }
 
 * {
-  cursor:
-    url('//images/sources/Cursor.svg') 5 5,
-    url('//images/sources/Cursor.png') 5 5,
-    auto;
+  cursor: var(--cursor-default);
 }
 
 html {
