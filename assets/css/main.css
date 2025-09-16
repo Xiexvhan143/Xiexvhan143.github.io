@@ -10,11 +10,14 @@
   --transition-speed: 0.3s;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
   cursor: url('//images/sources/Cursor.svg'), 5 5,
     url('/images/sources/Cursor.png') 5 5,
     pointer;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
