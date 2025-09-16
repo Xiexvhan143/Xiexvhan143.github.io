@@ -26,22 +26,17 @@ layout: page
 <div class="skills-container" id="skillsContainer">
   <div class="skill-item" draggable="true">
     <img src="{{ site.url }}/images/skills/Blender.svg">
-    <span>Blender</span>
   </div>
   <div class="skill-item" draggable="true">
-    
-    <span>Pt</span>
+      <img src="{{ site.url }}/images/skills/Pt.svg">
   </div>
   <div class="skill-item" draggable="true">
-    
-    <span>ZBrush</span>
+      <img src="{{ site.url }}/images/skills/ZBrush.svg">
   </div>
   <div class="skill-item" draggable="true">
-    
-    <span>Ps</span>
+      <img src="{{ site.url }}/images/skills/Ps.svg">
   </div>
   <div class="skill-item" draggable="true">
-    
-    <span>Ai</span>
+      <img src="{{ site.url }}/images/skills/Ai.svg">
   </div>
 </div>
