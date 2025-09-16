@@ -22,7 +22,7 @@ body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: url('{{ site.url }}/images/sources/Cursor.svg'),
+  cursor: url('../images/sources/Cursor.svg'),5 5
   auto;
 }
 
