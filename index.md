@@ -40,6 +40,6 @@ layout: page
       <img src="{{ site.url }}/images/skills/Ai.svg">
   </div>
    <div class="skill-item" draggable="true">
-      <img src="{{ site.url }}/images/skills/Sd.svg">
+      <img src="{{ site.url }}/images/skills/Sa.svg">
   </div>
 </div>
