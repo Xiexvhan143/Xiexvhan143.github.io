@@ -2,84 +2,86 @@
 <script>window.jQuery || document.write('<script src="{{ site.url }}/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 <script src="{{ site.url }}/assets/js/main.min.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
   ga('create', 'G-T5N5JY1E21', 'caihanlin.com');
   ga('send', 'pageview');
 
-/**/
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.getElementById('skillsContainer');
+  /**/
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('skillsContainer');
     let dragItem = null;
 
-  // 添加拖动事件
-  container.querySelectorAll('.skill-item').forEach(item => {
+    // 添加拖动事件
+    container.querySelectorAll('.skill-item').forEach(item => {
       item.addEventListener('dragstart', function (e) {
         dragItem = this;
         setTimeout(() => this.classList.add('dragging'), 0);
       });
 
-    item.addEventListener('dragend', function() {
-      this.classList.remove('dragging');
-    dragItem = null;
+      item.addEventListener('dragend', function () {
+        this.classList.remove('dragging');
+        dragItem = null;
+      });
     });
-  });
 
-  // 处理拖动放置
-  container.addEventListener('dragover', e => {
+    // 处理拖动放置
+    container.addEventListener('dragover', e => {
       e.preventDefault();
-    const afterElement = getDragAfterElement(container, e.clientY);
-    if (dragItem && afterElement) {
-      container.insertBefore(dragItem, afterElement);
-    }
-  });
+      const afterElement = getDragAfterElement(container, e.clientY);
+      if (dragItem && afterElement) {
+        container.insertBefore(dragItem, afterElement);
+      }
+    });
 
     // 计算放置位置
     function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.skill-item:not(.dragging)')];
-    
-    return draggableElements.reduce((closest, child) => {
-      const box = child.getBoundingClientRect();
-    const offset = y - box.top - box.height / 2;
+      const draggableElements = [...container.querySelectorAll('.skill-item:not(.dragging)')];
 
-    if (offset < 0 && offset > closest.offset) {
-        return {offset: offset, element: child };
-      } else {
-        return closest;
-      }
-    }, {offset: Number.NEGATIVE_INFINITY }).element;
-  }
+      return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+
+        if (offset < 0 && offset > closest.offset) {
+          return { offset: offset, element: child };
+        } else {
+          return closest;
+        }
+      }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
 
     // 移动端触摸支持
     let touchStartY = 0;
-  
-  container.addEventListener('touchstart', e => {
-    if (!e.target.closest('.skill-item')) return;
-    dragItem = e.target.closest('.skill-item');
-    touchStartY = e.touches[0].clientY;
-    dragItem.classList.add('dragging');
-  }, {passive: false });
-  
-  container.addEventListener('touchmove', e => {
-    if (!dragItem) return;
-    e.preventDefault();
 
-    const y = e.touches[0].clientY;
-    const afterElement = getDragAfterElement(container, y);
+    container.addEventListener('touchstart', e => {
+      if (!e.target.closest('.skill-item')) return;
+      dragItem = e.target.closest('.skill-item');
+      touchStartY = e.touches[0].clientY;
+      dragItem.classList.add('dragging');
+    }, { passive: false });
 
-    if (afterElement) {
-      container.insertBefore(dragItem, afterElement);
-    }
-  }, {passive: false });
-  
-  container.addEventListener('touchend', () => {
-    if (dragItem) {
-      dragItem.classList.remove('dragging');
-    dragItem = null;
-    }
+    container.addEventListener('touchmove', e => {
+      if (!dragItem) return;
+      e.preventDefault();
+
+      const y = e.touches[0].clientY;
+      const afterElement = getDragAfterElement(container, y);
+
+      if (afterElement) {
+        container.insertBefore(dragItem, afterElement);
+      }
+    }, { passive: false });
+
+    container.addEventListener('touchend', () => {
+      if (dragItem) {
+        dragItem.classList.remove('dragging');
+        dragItem = null;
+      }
+    });
   });
-});
 </script>
