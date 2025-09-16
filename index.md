@@ -24,9 +24,24 @@ layout: page
 ## 专业技能展示
 
 <div class="skills-container" id="skillsContainer">
-  <div class="skill-item" draggable="true"><span>Blender</span></div>
-  <div class="skill-item" draggable="true"><span>Pt</span> </div>
-  <div class="skill-item" draggable="true"><span>ZBrush</span></div>
-  <div class="skill-item" draggable="true"><span>Ps</span></div>
-  <div class="skill-item" draggable="true"><span>Ai</span></div>
+  <div class="skill-item" draggable="true">
+    <img src="{{ site.url }}/images/skills/Blender.svg">
+    <span>Blender</span>
+  </div>
+  <div class="skill-item" draggable="true">
+    
+    <span>Pt</span>
+  </div>
+  <div class="skill-item" draggable="true">
+    
+    <span>ZBrush</span>
+  </div>
+  <div class="skill-item" draggable="true">
+    
+    <span>Ps</span>
+  </div>
+  <div class="skill-item" draggable="true">
+    
+    <span>Ai</span>
+  </div>
 </div>
