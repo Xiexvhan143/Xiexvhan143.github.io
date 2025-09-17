@@ -49,7 +49,7 @@ body {
 
 /* 侧边栏样式优化 */
 .article-author-top {
-  width: 250px;
+  width: 150px;
   padding: 25px;
   margin-right: 40px;
   display: flex;
