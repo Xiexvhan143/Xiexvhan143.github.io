@@ -321,32 +321,24 @@ article a {
 
 article a:hover {
   color: var(--accent-color);
-  /* 保持颜色一致 */
   text-decoration: none;
-  /* 确保悬停时无下划线 */
 }
 
 article a::after {
   content: '';
   position: absolute;
   bottom: -5px;
-  /* 调整位置到文字下方 */
   left: 50%;
-  /* 从中间开始扩展 */
   transform: translateX(-50%);
-  /* 居中定位 */
   width: 0;
   height: 3px;
-  /* 与导航栏一致的高度 */
   background-color: var(--accent-color);
   transition: width var(--transition-speed);
   border-radius: 1.5px;
-  /* 添加轻微圆角 */
 }
 
 article a:hover::after {
   width: 80%;
-  /* 扩展到80%宽度 */
 }
 
 /* =============== 页脚链接样式优化 =============== */
@@ -599,7 +591,7 @@ input:checked+.slider:before {
 .skills-container {
   position: relative;
   width: 100%;
-  padding: 20px;
+  padding: 30px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   margin: 40px 0;
@@ -608,32 +600,25 @@ input:checked+.slider:before {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 25px;
   justify-items: center;
-}
-
-.skills-container::before {
-  content: none;
 }
 
 .skill-item {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.05);
-  transition: all var(--transition-speed);
+  transition: all 0.3s ease;
   overflow: hidden;
   z-index: 2;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  cursor: default;
-  top: auto !important;
-  left: auto !important;
 }
 
 .skill-item:hover {
@@ -644,8 +629,8 @@ input:checked+.slider:before {
 }
 
 .skill-item img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 8px;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -655,19 +640,12 @@ input:checked+.slider:before {
   transform: scale(1.15);
 }
 
-/* 移除拖动状态样式 */
-.skill-item.dragging {
-  opacity: 1 !important;
-  transform: none !important;
-  z-index: 2;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
 /* 响应式调整 */
 @media (max-width: 768px) {
   .skills-container {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 15px;
+    padding: 20px;
   }
 
   .skill-item {
@@ -678,5 +656,34 @@ input:checked+.slider:before {
   .skill-item img {
     width: 40px;
     height: 40px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #main article,
+  #index {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  body {
+    padding: 10px;
   }
 }
